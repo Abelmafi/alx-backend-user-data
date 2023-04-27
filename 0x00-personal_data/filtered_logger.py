@@ -1,4 +1,6 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+""" Task1: Write a function called filter_datum
+that returns the log message obfuscated:"""
 import re
 
 
