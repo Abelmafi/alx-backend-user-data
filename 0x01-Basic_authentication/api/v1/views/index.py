@@ -44,3 +44,4 @@ def forbidden() -> str:
         str: 403 status code
     '''
     abort(403)
+
