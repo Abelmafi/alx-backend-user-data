@@ -56,9 +56,7 @@ def unauthorized_request(error) -> str:
     '''Unauthorized requests
     '''
 
-    return jsonify({
-        "error": "Unauthorized"
-        }), 401
+    return jsonify({"error": "Unauthorized"}), 401
 
 
 @app.errorhandler(403)
@@ -66,9 +64,7 @@ def forbidden_request(error) -> str:
     '''Forbidden request
     '''
 
-    return jsonify({
-        "error": "Forbidden"
-        }), 403
+    return jsonify({"error": "Forbidden"}), 403
 
 
 if __name__ == "__main__":
