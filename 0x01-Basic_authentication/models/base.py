@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-""" Base module
+""" Module of Index views
 """
+from flask import jsonify, abort
+from api.v1.views import app_views
 from datetime import datetime
 from typing import TypeVar, List, Iterable
 from os import path
@@ -126,6 +128,7 @@ class Base():
         """ Search all objects with matching attributes
         """
         s_class = cls.__name__
+
         def _search(obj):
             if len(attributes) == 0:
                 return True
@@ -133,5 +136,5 @@ class Base():
                 if (getattr(obj, k) != v):
                     return False
             return True
-        
+
         return list(filter(_search, DATA[s_class].values()))
