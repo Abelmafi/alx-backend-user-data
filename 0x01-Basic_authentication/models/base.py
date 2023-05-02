@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """ Module of Index views
 """
-from flask import jsonify, abort
-from api.v1.views import app_views
 from datetime import datetime
 from typing import TypeVar, List, Iterable
 from os import path
