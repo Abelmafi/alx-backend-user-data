@@ -9,6 +9,7 @@ from typing import (
 )
 from os import getenv
 
+
 class Auth:
     """
     Manages the API authentication
