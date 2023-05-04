@@ -2,7 +2,6 @@
 """ Defination of class SessionAuth. """
 from .auth import Auth
 import uuid
-from os import getenv
 
 
 class SessionAuth(Auth):
@@ -39,7 +38,7 @@ class SessionAuth(Auth):
         returns a User instance based on a cookie value:
         """
         cookie_value = self.session_cookie(request)
-        user_id = self.user_id_for_session_id(cookie_value)
+        user_id = self.user_id_session_id(cookie_value)
         user = User.get(user_id)
 
         return user
