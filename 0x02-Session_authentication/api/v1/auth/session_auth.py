@@ -13,6 +13,10 @@ class SessionAuth(Auth):
     user_id_by_session_id = {}
 
     def create_session(self, user_id: str = None) -> str:
+        """
+        creates random session id and save the value to session dictionary
+        and return random session id
+        """
         if user_id is None or isinstance(user_id, str):
             return None
         session_id = str(uuid.uuid4())
